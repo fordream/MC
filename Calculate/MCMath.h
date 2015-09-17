@@ -1,8 +1,8 @@
-#include <iostream>
+﻿#include <iostream>
 
-//等比数列
+//等比数列 
 //An=a * (q^n)
 double GetAnProduct(float a, float q, int n);
 //A1+A2+...+An
-double GetSumOfAProduct(float a, float q, int n);
+double GetSumOfAnProduct(float a, float q, int n);
 

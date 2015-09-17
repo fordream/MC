@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <math.h>
 
@@ -7,7 +6,7 @@ double GetAnProduct(float a, float q, int n)
 	return a * pow(q, n-1);
 }
 
-double GetSumOfAProduct(float a, float q, int n)
+double GetSumOfAnProduct(float a, float q, int n)
 {
 	if (q == 1)
 	{

@@ -5,11 +5,13 @@ class Calculate
 {
 	public:
 		/**
-		*	GetYearInterest
-		*	param: fCapital - 本金 
+		*	GetTimeDipositNYearsLater
+		* 
+		*	param: fCapital - 月定存本金 
 		*	param: fYearRate - 年利率 
+		*	param: n - 年数 
 		*/
-		double GetYearInterest(float fCapital, float fYearRate);
+		double GetTimeDipositNYearsLater(float fMonthCapital, float fYearRate, int n);
 		/**
 		*	GetMonthTimeDipositOneYear
 		*
@@ -18,6 +20,15 @@ class Calculate
 		*	param: fYearRate - 年利率 
 		*/
 		double GetMonthTimeDipositOneYear(float fMonthCapital, float fYearRate);
+		/**
+		*	GetYearTimeDipositNYear
+		*
+		*	获得月定存年资本 
+		*	param: fCapital - 年定存本金 
+		*	param: fYearRate - 年利率 
+		*	param: n - 年数 
+		*/
+		double GetYearTimeDipositNYear(float fYearCapital, float fYearRate, int n);
 		
 		Calculate();
 		~Calculate();

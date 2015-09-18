@@ -3,12 +3,18 @@
 
 using namespace std;
 
-double Calculate::GetYearInterest(float fCapital, float fYearRate)
+double Calculate::GetTimeDipositNYearsLater(float fMonthCapital, float fYearRate, int n)
 {
-	cout<<"fCapital -> "<<fCapital<<endl;
-	cout<<"fYearRate -> "<<fYearRate<<endl;
-	cout<<"Add ->"<<GetAnProduct(fCapital, fCapital, fYearRate)<<endl;
-	cout<<"Add ->"<<GetSumOfAnProduct(fCapital, fCapital, fYearRate)<<endl;
+	cout<<"月定存 -> "<<fMonthCapital<<" 元。"<<endl;
+	cout<<"年利率 -> "<<fYearRate<<endl;
+	cout<<n<<" 年之后 。。。"<<endl;
+	
+	double fYearCapital = GetMonthTimeDipositOneYear(fMonthCapital, fYearRate);
+	double fNYearCapital = GetYearTimeDipositNYear(fYearCapital, fYearRate, n);
+	cout<<"每月定存， 每年年底成果 ->"<<fYearCapital<<endl;
+	cout<<n<<" 年之后，总资产 "<<fNYearCapital<<endl;
+	
+	return fNYearCapital;
 }
 
 double Calculate::GetMonthTimeDipositOneYear(float fMonthCapital, float fYearRate)
@@ -16,7 +22,14 @@ double Calculate::GetMonthTimeDipositOneYear(float fMonthCapital, float fYearRat
 	float fMonthRate = fYearRate / 12 + 1.0; //month Rate
 	double dYearCapital = GetSumOfAnProduct(fMonthCapital, fMonthRate, 12);
 	return dYearCapital;
-} 
+}
+
+double Calculate::GetYearTimeDipositNYear(float fYearCapital, float fYearRate, int n)
+{
+	fYearRate += 1; 
+	double dNYearCapital = 	GetSumOfAnProduct(fYearCapital, fYearRate, n);
+	return  dNYearCapital;
+}
 
 Calculate::Calculate()
 {

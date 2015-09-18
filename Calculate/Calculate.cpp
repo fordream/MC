@@ -5,14 +5,14 @@ using namespace std;
 
 double Calculate::GetTimeDipositNYearsLater(float fMonthCapital, float fYearRate, int n)
 {
-	cout<<"ÔÂ¶¨´æ -> "<<fMonthCapital<<" Ôª¡£"<<endl;
-	cout<<"ÄêÀûÂÊ -> "<<fYearRate<<endl;
-	cout<<n<<" ÄêÖ®ºó ¡£¡£¡£"<<endl;
+	cout<<"æœˆå®šå­˜-> "<<fMonthCapital<<" å…ƒ"<<endl;
+	cout<<"å¹´åˆ©çŽ‡ -> "<<fYearRate<<endl;
+	cout<<n<<" å¹´"<<endl;
 	
 	double fYearCapital = GetMonthTimeDipositOneYear(fMonthCapital, fYearRate);
 	double fNYearCapital = GetYearTimeDipositNYear(fYearCapital, fYearRate, n);
-	cout<<"Ã¿ÔÂ¶¨´æ£¬ Ã¿ÄêÄêµ×³É¹û ->"<<fYearCapital<<endl;
-	cout<<n<<" ÄêÖ®ºó£¬×Ü×Ê²ú "<<fNYearCapital<<endl;
+	cout<<"æ¯å¹´å®šå­˜æœ¬é‡‘ ->"<<fYearCapital<<endl;
+	cout<<n<<" å¹´ä¹‹åŽ "<<fNYearCapital<<endl;
 	
 	return fNYearCapital;
 }

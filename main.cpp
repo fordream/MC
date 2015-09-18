@@ -15,22 +15,22 @@ int main(int argc, char const *argv[])
 		fMonthCapital = 0.0;
 		fYearRate = 0.0;
 		n = 0;
-		cout<<"ÇëÊäÈëÔÂ¶¨´æ×Ê½ð£º";
+		cout<<"è¯·è¾“å…¥æœˆå®šå­˜æœ¬é‡‘ï¼š";
 		cin>>fMonthCapital;
 		cout<<endl;
 		
-		cout <<"ÇëÊäÈëÄêÀûÂÊ£¨Èç 0.07£©:";
+		cout <<"è¯·è¾“å…¥å¹´åˆ©çŽ‡:";
 		cin>> fYearRate;
 		cout<<endl;
 		
-		cout<<"ÇëÊäÈë¶¨´æÄêÊý£º";
+		cout<<"è¯·è¾“å…¥å¹´æ•°ï¼š";
 		cin>>n;
 		cout<<endl;
 		
 		cal->GetTimeDipositNYearsLater(fMonthCapital, fYearRate, n);
 		
 		
-		cout<<"Èç¹û¼ÌÐø£¬ÇëÊäÈë 1 £¬ ·ñÔòÈÎÒâ¼üÍË³ö ¡£¡£¡£";
+		cout<<"å¦‚æžœç»§ç»­è¯·è¾“å…¥ 1 ï¼Œå¦åˆ™ä»»æ„é”®é€€å‡ºã€‚ã€‚ã€‚";
 		cin>>isContinue;
 		cout<<"==========================================="<<endl;
 	} while(isContinue == 1);
